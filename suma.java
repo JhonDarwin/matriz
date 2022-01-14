@@ -10,7 +10,7 @@ public class suma{
          int N2[][] = new int[2][2];
          int NSuma[][] = new int[2][2];
          int NMulti[][] = new int[2][2];
-
+         
          System.out.println("INGRESE DATOS PRIMERA MATRIZ: ");
          for(int i = 0;i < 2; i++){
              for(int j = 0;j < 2; j++){         
