@@ -10,38 +10,40 @@ package matricesjhond;
  */
 public class maximoyminimo {
     public static void main(String[]args){
-		int[] sueldo= {63,82,36,49,56,64,59,35,78,
-                                43,51,70,57,62,43,68,62,26,
-                                64,72,52,51,62,60,71,61,55,
-                                59,60,67,57,67,61,67,51,81,
-                                50,64,76,44,73,56,62,63,60}; 
-                int total=sueldo.length;
-		int mayor=0; 
-		int menor=26; 
-                int rango=0;
+		double[] tiempos= {21.3,21.9,20.5,15.8,	12.2,	20.5, 19.7,
+                                26.8,	18.4,	22.3,	18.5,	17.3, 15.1,22.8,
+                                8.3,	18,	19.6,	17.9,	24.6, 23.9,	
+                                15.8,	12.3,	11,	26.4,	13.4, 16.2,	
+                                22.7,	22.7,	13.4,	23,	11.2, 19.1}; 
+                int total=tiempos.length;
+		double mayor=0; 
+		double menor=26; 
+                double rango=0;
                 float Amplitud=0;
                 float K=0;
-                double redondeandoK=Math.ceil(6.32);
-                double logaritmo=Math.log10(45);
+                double redondeandoK=Math.ceil(5.83);
+                double logaritmo=Math.log10(32);
 
-		for (int i = 0; i < sueldo.length; i++){
-			if (mayor < sueldo[i])
-				mayor = sueldo[i];
-                       if (menor > sueldo[i])
-				menor = sueldo[i];
+		for (int i = 0; i < tiempos.length; i++){
+			if (mayor < tiempos[i])
+				mayor = tiempos[i];
+                       if (menor > tiempos[i])
+				menor = tiempos[i];
 		}
                 rango=mayor-menor;
-                K=(float) (1+3.22*Math.log10(45));
-                Amplitud=(float) (rango/redondeandoK);
+                K=(float) (1+3.22*Math.log10(32));
+                Amplitud=(float) (rango/K);
                 
                 
-                System.out.println("cantidad total de sueldos: " + total);
-		System.out.println("sueldo mayor : " + mayor);
-		System.out.println("sueldo menor : " + menor);
+                System.out.println("cantidad total de estudiantes: " + total);
+		System.out.println("tiempo mayor : " + mayor);
+		System.out.println("tiempo menor : " + menor);
                 System.out.println("Rango : " + rango);
                 System.out.println("La amplitud es : " + Amplitud);
                 System.out.println("numero K sin redondear: " + K);
                 System.out.println("Valor de K (intervalos): " + redondeandoK);
+                
+                
                 
                 
 	}
